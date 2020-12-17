@@ -1,0 +1,183 @@
+create database tugas1;
+use tugas1;
+-- soal 1
+-- tabel 1
+create table data_sparepart (
+kode_part int (6),
+nama_part varchar (50),
+harga_part int (8),
+tipe_motor varchar (50),
+primary key(kode_part)
+);
+insert into data_sparepart values ('100001','stang','120000','matic');
+insert into data_sparepart values ('100002','kunci','250000','matic');
+insert into data_sparepart values ('100003','bearing','10000','matic');
+insert into data_sparepart values ('100004','standar','180000','matic');
+insert into data_sparepart values ('100005','shock breaker','900000','matic');
+insert into data_sparepart values ('100006','lampu','135000','matic');
+insert into data_sparepart values ('100007','stang','110000','bebek');
+insert into data_sparepart values ('100008','kunci','190000','bebek');
+insert into data_sparepart values ('100009','bearing','8000','bebek');
+insert into data_sparepart values ('100010','standar','145000','bebek');
+insert into data_sparepart values ('100011','shock breaker','750000','bebek');
+insert into data_sparepart values ('100012','lampu','110000','bebek');
+insert into data_sparepart values ('100013','gear set','375000','bebek');
+insert into data_sparepart values ('100014','stang','210000','sport');
+insert into data_sparepart values ('100015','kunci','240000','sport');
+insert into data_sparepart values ('100016','bearing','15000','sport');
+insert into data_sparepart values ('100017','standar','190000','sport');
+insert into data_sparepart values ('100018','shock breaker','960000','sport');
+insert into data_sparepart values ('100019','lampu','260000','sport');
+insert into data_sparepart values ('100020','gear set','580000','sport');
+-- tabel 2
+create table daftarmenu (
+nama_menu varchar (50),
+harga_menu int (8),
+stock_menu int (8),
+jenis_menu varchar (50),
+primary key(nama_menu)
+);
+insert into daftarmenu values ('ayam goreng','15000','120','makanan');
+insert into daftarmenu values ('ayam bakar','16000','110','makanan');
+insert into daftarmenu values ('ayam bakar madu','17500','110','makanan');
+insert into daftarmenu values ('ayam hainan','21000','110','makanan');
+insert into daftarmenu values ('ayam kalasan','12000','110','makanan');
+insert into daftarmenu values ('ayam taliwang','20000','110','makanan');
+insert into daftarmenu values ('ayam crispy','18500','90','makanan');
+insert into daftarmenu values ('sayur lodeh','9000','200','makanan');
+insert into daftarmenu values ('sayur sop','8000','190','makanan');
+insert into daftarmenu values ('sayur bayam','8000','110','makanan');
+insert into daftarmenu values ('sayur asem','10000','220','makanan');
+insert into daftarmenu values ('sayur pare','7000','90','makanan');
+insert into daftarmenu values ('es teh','4000','350','minuman');
+insert into daftarmenu values ('es jeruk','5000','360','minuman');
+insert into daftarmenu values ('es soda','9000','200','minuman');
+insert into daftarmenu values ('tempe mendoan','1500','540','cemilan');
+insert into daftarmenu values ('tempe geprek','1500','420','cemilan');
+insert into daftarmenu values ('tahu goreng','1000','650','cemilan');
+insert into daftarmenu values ('tahu geprek','1500','400','cemilan');
+insert into daftarmenu values ('kerupuk','1500','800','cemilan');
+-- tabel 3
+create table fieldreport (
+nama_komponen varchar (50),
+jumlah_komponen_awal int (8),
+jumlah_komponen_akhir int (8),
+kondisi varchar (50),
+primary key(nama_komponen)
+);
+insert into fieldreport values ('kabel tr','800','800','baik');
+insert into fieldreport values ('kabel tm','400','400','baik');
+insert into fieldreport values ('kabel ground','300','300','baik');
+insert into fieldreport values ('kabel kubikel','310','310','baik');
+insert into fieldreport values ('tiang kayu','100','100','perlu prebaikan');
+insert into fieldreport values ('tiang besi','500','500','baik');
+insert into fieldreport values ('tiang beton','300','300','baik');
+insert into fieldreport values ('tiang baja','70','70','baik');
+insert into fieldreport values ('lampu jalan 40 w','310','310','perlu perbaikan');
+insert into fieldreport values ('lampu jalan 80 W','210','210','baik');
+insert into fieldreport values ('lampu jalan 100 2','70','70','baik');
+insert into fieldreport values ('pembatas jalan','1200','1200','perlu perbaikan');
+insert into fieldreport values ('spotlight','3200','3200','baik');
+insert into fieldreport values ('pagar besi','4000','4000','perlu perbaikan');
+insert into fieldreport values ('forklift','10','10','baik');
+insert into fieldreport values ('bulldozer','15','150','baik');
+insert into fieldreport values ('crane','5','5','baik');
+insert into fieldreport values ('truk pengangkut','20','20','baik');
+insert into fieldreport values ('portal pembatas','300','300','baik');
+insert into fieldreport values ('jaring safety','700','700','perlu perbaikan');
+-- tabel 4
+create table perabotan (
+nama_perabotan varchar (50),
+jumlah_stock int (8),
+jumlah_harga int (8),
+terjual int (8),
+primary key(nama_perabotan)
+);
+insert into perabotan values ('sapu','10','25000','8');
+insert into perabotan values ('kain pel','10','12000','5');
+insert into perabotan values ('pel gagang','5','32000','5');
+insert into perabotan values ('kain lap','70','2500','65');
+insert into perabotan values ('kain microfiber','30','75000','25');
+insert into perabotan values ('kemoceng','20','35000','13');
+insert into perabotan values ('baskom kecil','50','19000','39');
+insert into perabotan values ('baskom sedang','25','31000','12');
+insert into perabotan values ('baskom besar','8','47000','4');
+insert into perabotan values ('panci kecil','61','45000','47');
+insert into perabotan values ('panci sedang','35','94000','20');
+insert into perabotan values ('panci besar','20','112000','13');
+insert into perabotan values ('kompor gas','24','160000','20');
+insert into perabotan values ('kompor listrik','30','540000','2');
+insert into perabotan values ('kompor induksi','30','12000','23');
+insert into perabotan values ('kompor camping','47','125000','46');
+insert into perabotan values ('meja pendek','43','120000','32');
+insert into perabotan values ('meja tinggi','12','532000','7');
+insert into perabotan values ('karpet lingkaran','72','395000','10');
+insert into perabotan values ('karpet persegi','80','375000','76');
+-- tabel 5
+create table warga (
+nama_warga varchar (50),
+jumlah_keluarga int (8),
+jumlah_kendaraan int (8),
+pendapatan int (50),
+primary key(nama_warga)
+);
+insert into warga values ('marsani lempar lembing','4','2','16000000');
+insert into warga values ('nanang racing','5','3','13000000');
+insert into warga values ('yayat plafon','3','2','7000000');
+insert into warga values ('munawir escobar','7','4','39000000');
+insert into warga values ('dayat kopi','2','1','6000000');
+insert into warga values ('agus peter jaelani','5','5','14000000');
+insert into warga values ('james apwg','4','3','12000000');
+insert into warga values ('nuang jaelani','4','3','13000000');
+insert into warga values ('daryanto berlin','4','3','12600000');
+insert into warga values ('saeful karbu','4','5','16000000');
+insert into warga values ('lucifer morningstar','1','6','120000000');
+insert into warga values ('nanda nindi','5','3','10000000');
+insert into warga values ('duyung dayani','3','1','9000000');
+insert into warga values ('cuprit castello','5','4','23000000');
+insert into warga values ('bambang strong','8','5','34000000');
+insert into warga values ('chika ceria','2','2','9000000');
+insert into warga values ('nikita liatin','3','3','31000000');
+insert into warga values ('agung pelor','2','2','9000000');
+insert into warga values ('irwan alone','1','1','19000000');
+insert into warga values ('sendi lincah','5','4','14500000');
+-- soal 2.1
+show tables;
+-- tabel 1
+select * from data_sparepart;
+select count(*)harga_part from data_sparepart;
+select avg(harga_part) from data_sparepart;
+select min(harga_part) from data_sparepart;
+select max(harga_part) from data_sparepart;
+select kode_part, length(nama_part) as jumlah_karakter from data_sparepart order by kode_part;
+-- tabel 2
+select * from daftarmenu;
+select count(*)nama_menu from daftarmenu;
+select avg(harga_menu) from daftarmenu;
+select min(harga_menu) from daftarmenu;
+select max(harga_menu) from daftarmenu;
+select nama_menu, length(nama_menu) as jumlah_karakter from daftarmenu order by nama_menu;
+-- tabel 3
+select * from fieldreport;
+select count(*)nama_komponen from fieldreport;
+select avg(jumlah_komponen_awal) from fieldreport;
+select min(jumlah_komponen_awal) from fieldreport;
+select max(jumlah_komponen_awal) from fieldreport;
+select nama_komponen, length(nama_komponen) as jumlah_karakter from fieldreport order by nama_komponen;
+-- tabel 4
+select * from perabotan;
+select count(*)nama_perabotan from perabotan;
+select avg(jumlah_harga) from perabotan;
+select min(jumlah_harga) from perabotan;
+select max(jumlah_harga) from perabotan;
+select nama_perabotan, length(nama_perabotan) as jumlah_karakter from perabotan order by nama_perabotan;
+-- tabel 5
+select * from warga;
+select count(*)nama_warga from warga;
+select avg(pendapatan) from warga;
+select min(pendapatan) from warga;
+select max(pendapatan) from warga;
+select nama_warga, length(nama_warga) as jumlah_karakter from warga order by nama_warga;
+-- soal 2.2
+select*from fieldreport order by kondisi; -- mengetahui komponen yang memerlukan perbaikan atau wajib diganti
+select nama_perabotan from perabotan where terjual > (select avg(terjual)from perabotan); -- mengatahui perabotan yang terlalis sebagai gambaran untuk restock
